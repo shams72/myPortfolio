@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Greetings!!{% endblock %}
+
+{% block content %}
+
+<div>
+<div class="welcome-page">
+    <h1 id="greeting" class="greetings"></h1>
+    <h2 id="translation"></h2>
+</div>
+</div>
+<script>
+    const greetings = ['Hej!!','Bonjour','مرحباً', 'স্বাগতম','வணக்கம்','Привет','こんにちは','സ്വാഗതം','आदाब','Wilkommen','Hello!!'];
+    const translations =['~(Marhaba)~','~(Shagotom)~','(~Vaṇakkam)~','~(Privyet)~','~(Konnichiwa)~','~(Swagatham)~','~(Aadaab)~',' '];
+
+    function displayGreetings() {
+        for (let i = 0; i < greetings.length; i++) {
+            setTimeout(() => {
+                document.getElementById("greeting").textContent = greetings[i];
+                if(i> 1 && i< 10){    
+                       document.getElementById("translation").textContent = translations[i-2];    
+                }
+                if (i === greetings.length - 1) {
+                        setTimeout(() => {
+                            window.location.href = "{% url 'about_me' %}";
+                        }, 1780);
+                    }
+            },i* 1750);
+        }
+    }
+
+
+    
+    displayGreetings();
+</script>
+{% endblock %}

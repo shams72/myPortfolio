@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}About-Me{% endblock %}
+
+{% block content %}
+  
+   <div class = "big_container">
+     <div class="container" >
+        <p class="description anim2">
+          Just another CS student here, piecing together a portfolio website to catch the eyes of recruiters.<br>My name's Shams, and 
+          I've got roots in Bangladesh, but I spent my formative years soaking up the sun in Qatar. Back in Qatar, I kicked off my schooling in an Indian
+          institution before making the leap to Germany.
+        </p>
+        <p class="description anim3">
+          Right now, I'm knee-deep in my CS degree at Darmstadt University of Applied Sciences, cruising through my fourth semester.        
+          If you like what you see in my side projects and resume and think I'd be a good fit for your team, shoot me an email in my inbox.
+        </p>
+        <p class="description anim4 box">
+          I Happen To Know:<br>          
+           - Object Oriented Programming (OOP) in C++<br>
+           - Qt (Qt UI developement)<br>
+           - Software Design Patterns (Singleton, Observer, Factory etc.)<br>
+           - Java<br>
+           - Django(Beginner)<br>
+           - SQL<br>
+           - HTML/CSS<br>                     
+        </p>
+     </div>
+
+     
+
+     <div class="images anim2">
+        <img src="{% static 'pic2.jpg' %}" alt="alternative_text">
+     </div>
+    
+    </div>
+{% endblock %}
