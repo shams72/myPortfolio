@@ -387,6 +387,8 @@ img {
     margin: 0 auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 15px;
+   /* border: 2px solid #FF4500;*/
+    
 }
 
 .topic-link{
@@ -440,3 +442,13 @@ button:hover {
     
 }
 
+.two-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.two-buttons button {
+    margin: 2px;
+}
