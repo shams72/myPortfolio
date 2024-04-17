@@ -11,22 +11,22 @@
 </div>
 </div>
 <script>
-    const greetings = ['Hej!!','Bonjour','مرحباً', 'স্বাগতম','வணக்கம்','Привет','こんにちは','സ്വാഗതം','आदाब','Wilkommen','Hello!!'];
-    const translations =['~(Marhaba)~','~(Shagotom)~','(~Vaṇakkam)~','~(Privyet)~','~(Konnichiwa)~','~(Swagatham)~','~(Aadaab)~',' '];
+    const greetings = ['Hej!!','Bonjour!','ٱلسَّلَامُ عَلَيْكُمْ', 'স্বাগতম','வணக்கம்','Привет','こんにちは','സ്വാഗതം','आदाब','你好','Wilkommen','Hello!!'];
+    const translations =['~(As-salāmu ʿalaykum)~','~(Shagotom)~','(~Vaṇakkam)~','~(Privyet)~','~(Konnichiwa)~','~(Swagatham)~','~(Aadaab)~','~(Nǐ hǎo)~',''];
 
     function displayGreetings() {
         for (let i = 0; i < greetings.length; i++) {
             setTimeout(() => {
                 document.getElementById("greeting").textContent = greetings[i];
-                if(i> 1 && i< 10){    
+                if(i> 1 && i< 11){    
                        document.getElementById("translation").textContent = translations[i-2];    
                 }
                 if (i === greetings.length - 1) {
                         setTimeout(() => {
                             window.location.href = "{% url 'about_me' %}";
-                        }, 1780);
+                        }, 1790);
                     }
-            },i* 1750);
+            },i === 3 ? i * 1850 : i * 1780);
         }
     }
 
