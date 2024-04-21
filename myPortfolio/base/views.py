@@ -3,6 +3,10 @@ from django.http import HttpResponse
 from .forms import CustomerForm
 from django.contrib import messages
 
+from django.http import FileResponse
+import os
+from django.conf import settings
+from django.conf.urls.static import static
 
 # Create your views here.
 
@@ -34,3 +38,4 @@ def contact(request):
 
 def projects(request):
     return render(request,'projects.html')
+
