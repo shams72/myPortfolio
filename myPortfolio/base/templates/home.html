@@ -16,21 +16,21 @@
 
     function displayGreetings() {
         for (let i = 0; i < greetings.length; i++) {
-            setTimeout(() => {
+            setTimeout(()=> { 
                 document.getElementById("greeting").textContent = greetings[i];
                 if(i> 1 && i< 11){    
                        document.getElementById("translation").textContent = translations[i-2];    
-                }
-                if (i === greetings.length - 1) {
-                        setTimeout(() => {
-                            window.location.href = "{% url 'about_me' %}";
-                        }, 1790);
-                    }
-            },i === 3 ? i * 1850 : i * 1750);
+                }    
+            }, 2000 * i);
+
+            if (i === greetings.length - 1) {
+                setTimeout(() => {
+                    window.location.href = "{% url 'about_me' %}";
+                }, (2000*i) + 1790); 
+            }
+           
         }
     }
-
-
     
     displayGreetings();
 </script>
