@@ -11,7 +11,7 @@ This portfolio features a variety of projects I've worked on, demonstrating my s
 If you want to explore the website or run it on your own machine, follow these steps:
 
 1. Clone or Download the Repository
-2. Navigate to `myportfolio -> myportfolio` (there are two folders with the same name).
+2. Navigate to `myportfolio(root directory) -> myportfolio` (there are two folders with the same name).
 3. Open the command prompt (CMD).
 4. Run the following command to start the project:
 
